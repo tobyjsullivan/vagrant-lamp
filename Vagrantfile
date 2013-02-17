@@ -50,6 +50,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe("mysql::server")
     chef.add_recipe("php::module_mysql")
     chef.add_recipe("apache2::mod_php5")
+    chef.add_recipe("vagrant::a2ensite_default")
     chef.json = {
       :mysql => {
         :server_root_password => 'root',
